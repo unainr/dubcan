@@ -9,7 +9,6 @@ import Logo from "./Logo";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-
 export default function MainHeader() {
 	const [isScrolled, setIsScrolled] = React.useState(false);
 	const pathname = usePathname();
@@ -24,65 +23,87 @@ export default function MainHeader() {
 
 	return (
 		<header
-			className={`fixed top-0 z-50 w-full transition-all duration-200 ${
-				isScrolled ? "bg-background/60 backdrop-blur-md" : ""
+			className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+				isScrolled
+					? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm"
+					: "bg-transparent"
 			}`}>
-			<div className="mx-auto  flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+			<div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Logo />
 
-				<nav className="hidden  md:flex items-center gap-4 lg:gap-6">
+				<nav className="hidden md:flex items-center gap-4 lg:gap-6">
 					<Link
 						href="/"
 						className={cn(
-							"text-sm font-medium transition-colors ",
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 							isActive("/") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
 						Home
 					</Link>
-
+					<Link
+						href="/about"
+						className={cn(
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
+							isActive("/about") &&
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
+						)}>
+						About
+					</Link>
 					<Link
 						href="/services"
 						className={cn(
-							"text-sm font-medium transition-colors ",
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 							isActive("/services") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
 						Services
 					</Link>
-					<Link
-						href="/photography"
-						className={cn(
-							"text-sm font-medium transition-colors ",
-							isActive("/photography") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-						)}>
-						Photography
-					</Link>
+
 					<Link
 						href="/event"
 						className={cn(
-							"text-sm font-medium transition-colors ",
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 							isActive("/event") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
 						Event
 					</Link>
 					<Link
 						href="/pricing"
 						className={cn(
-							"text-sm font-medium transition-colors ",
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 							isActive("/pricing") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
 						Pricing
 					</Link>
 				</nav>
 
 				<div className="hidden md:flex items-center gap-2">
-					
 					<Link href={"/contact"}>
-						<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">
+						<Button
+							className={cn(
+								"font-semibold shadow-lg hover:shadow-xl transition-all duration-300",
+								isScrolled
+									? "bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white"
+									: "bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30"
+							)}>
 							Get Quote
 						</Button>
 					</Link>
@@ -92,61 +113,72 @@ export default function MainHeader() {
 				<div className="md:hidden flex items-center">
 					<Sheet>
 						<SheetTrigger asChild>
-							<Button variant="ghost" size="icon">
+							<Button
+								variant="ghost"
+								size="icon"
+								className={cn(
+									"transition-colors",
+									isScrolled
+										? "text-slate-700 dark:text-slate-200"
+										: "text-white"
+								)}>
 								<Menu className="h-6 w-6" />
 							</Button>
 						</SheetTrigger>
-						<SheetContent side="right" className="w-[250px] sm:w-[300px]">
+						<SheetContent
+							side="right"
+							className="w-[250px] sm:w-[300px] bg-white dark:bg-slate-900">
 							<nav className="flex flex-col gap-4 mt-8 items-center">
 								<Link
 									href="/"
 									className={cn(
-										"text-sm font-medium transition-colors ",
+										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 										isActive("/") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 									)}>
 									Home
 								</Link>
 								<Link
+									href="/about"
+									className={cn(
+										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
+										isActive("/about") &&
+											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
+									)}>
+									About
+								</Link>
+								<Link
 									href="/services"
 									className={cn(
-										"text-sm font-medium transition-colors ",
+										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 										isActive("/services") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 									)}>
 									Services
 								</Link>
-								<Link
-									href="/photography"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/photography") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									Photography
-								</Link>
+
 								<Link
 									href="/event"
 									className={cn(
-										"text-sm font-medium transition-colors ",
+										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 										isActive("/event") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 									)}>
 									Event
 								</Link>
 								<Link
 									href="/pricing"
 									className={cn(
-										"text-sm font-medium transition-colors ",
+										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
 										isActive("/pricing") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 									)}>
 									Pricing
 								</Link>
-							
+
 								<Link href={"/contact"}>
-									<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">
-									Get Quote
+									<Button className="mt-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+										Get Quote
 									</Button>
 								</Link>
 							</nav>

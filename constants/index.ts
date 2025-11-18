@@ -22,7 +22,7 @@ export const features = [
 		icon: Zap,
 		title: "Enhanced Performance",
 		description:
-			"Maximize efficiency and power output with our cutting-edge lubricants",
+			"Maximize efficiency and power output with our cutting-edge dubcanlube",
 	},
 	{
 		icon: Award,
@@ -41,19 +41,19 @@ export const productCategories = [
 	{
 		name: "Engine Motor Oil",
 		description: "Heavy-duty diesel engine oils for maximum protection",
-		image: '/images/product-motor-oil.jpg',
+		image: "/images/product-motor-oil.jpg",
 		link: "/products?category=engine-oil",
 	},
 	{
 		name: "Gear Oil",
 		description: "Full synthetic gear oils for extreme conditions",
-		image: '/images/product-gear-oil.png',
+		image: "/images/product-gear-oil.png",
 		link: "/products?category=gear-oil",
 	},
 	{
 		name: "Grease",
 		description: "Multi-purpose lithium grease for industrial applications",
-		image: '/images/product-grease.png',
+		image: "/images/product-grease.png",
 		link: "/products?category=grease",
 	},
 ];
@@ -130,19 +130,19 @@ export const process = [
 
 export const faqs = [
 	{
-		question: "What makes LUBCAN lubricants different from competitors?",
+		question: "What makesdubcan dubcanlube different from competitors?",
 		answer:
-			"LUBCAN uses advanced nanotechnology formulation that provides superior protection and performance. Our products are API certified and meet or exceed SAE, ILSAC, and industry specifications, ensuring optimal performance even in extreme conditions.",
+			"dubcan uses advanced nanotechnology formulation that provides superior protection and performance. Our products are API certified and meet or exceed SAE, ILSAC, and industry specifications, ensuring optimal performance even in extreme conditions.",
 	},
 	{
-		question: "Are LUBCAN products suitable for heavy-duty applications?",
+		question: "Aredubcan products suitable for heavy-duty applications?",
 		answer:
-			"Yes, absolutely. Our lubricants are specifically engineered for heavy-duty diesel engines, industrial machinery, and demanding applications. They provide excellent thermal stability, oxidative resistance, and extended equipment life.",
+			"Yes, absolutely. Our dubcanlube are specifically engineered for heavy-duty diesel engines, industrial machinery, and demanding applications. They provide excellent thermal stability, oxidative resistance, and extended equipment life.",
 	},
 	{
-		question: "What certifications do LUBCAN products have?",
+		question: "What certifications dodubcan products have?",
 		answer:
-			"All LUBCAN products are certified by the American Petroleum Institute (API) and meet or exceed SAE, ILSAC, and other relevant industry standards. We maintain strict quality control to ensure consistent performance.",
+			"Alldubcan products are certified by the American Petroleum Institute (API) and meet or exceed SAE, ILSAC, and other relevant industry standards. We maintain strict quality control to ensure consistent performance.",
 	},
 	{
 		question: "How do I choose the right lubricant for my equipment?",
@@ -155,8 +155,8 @@ export const faqs = [
 			"Yes, we offer flexible ordering options including bulk orders for industrial and commercial clients. We provide reliable delivery services and can work with you to establish a regular supply schedule.",
 	},
 	{
-		question: "What is the shelf life of LUBCAN products?",
+		question: "What is the shelf life ofdubcan products?",
 		answer:
-			"When stored properly in sealed containers away from extreme temperatures, LUBCAN lubricants have a shelf life of 3-5 years. Always check the manufacturing date on the container and follow storage guidelines.",
+			"When stored properly in sealed containers away from extreme temperatures,dubcan dubcanlube have a shelf life of 3-5 years. Always check the manufacturing date on the container and follow storage guidelines.",
 	},
 ];
