@@ -18,7 +18,7 @@ export const CTA = () => {
         </span>
       </h2>
       <p className="text-white/95 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-        Contact us today to discuss your lubrication needs and get a custom quote tailored to your requirements
+        Contact us today to discuss your Dubcanlube needs and get a custom quote tailored to your requirements
       </p>
       <Link href="/contact">
         <Button variant="secondary" size="lg" className="px-10 py-6 h-auto text-lg hover:scale-105 hover:shadow-glow transition-all duration-300">

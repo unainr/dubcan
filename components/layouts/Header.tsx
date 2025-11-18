@@ -57,16 +57,16 @@ export default function MainHeader() {
 						About
 					</Link>
 					<Link
-						href="/services"
+						href="/products"
 						className={cn(
 							"text-sm font-medium transition-colors",
 							!isScrolled && "text-white/90 hover:text-white",
 							isScrolled &&
 								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-							isActive("/services") &&
+							isActive("/products") &&
 								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
-						Services
+						Products
 					</Link>
 
 					<Link
@@ -147,15 +147,18 @@ export default function MainHeader() {
 									)}>
 									About
 								</Link>
-								<Link
-									href="/services"
-									className={cn(
-										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-										isActive("/services") &&
-											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
-									)}>
-									Services
-								</Link>
+							<Link
+						href="/products"
+						className={cn(
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
+							isActive("/products") &&
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
+						)}>
+						Products
+					</Link>
 
 								<Link
 									href="/event"

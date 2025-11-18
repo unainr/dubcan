@@ -22,12 +22,12 @@ export const HeroSection = () => {
     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in leading-tight">
       Nanotechnology Formulation
       <br />
-      <span className="bg-linear-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-        Lubricants
+      <span className="bg-linear-to-r capitalize from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+       Dubcanlube
       </span>
     </h1>
     <p className="text-xl md:text-2xl text-white/95 mb-10 max-w-3xl mx-auto animate-slide-up font-light leading-relaxed">
-      Premium lubricants engineered for heavy-duty diesel engines, industrial machinery, and demanding applications
+      Premium Dubcanlube engineered for heavy-duty diesel engines, industrial machinery, and demanding applications
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
       <Link href="/products">
