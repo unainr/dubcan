@@ -6,6 +6,8 @@ import {
 } from "@/constants";
 import CategorySection from "../components/category-section";
 import Banner from "@/components/banner";
+import { CTA } from "@/modules/home/ui/components/CTA";
+import { FAQ } from "@/modules/home/ui/components/faq-section";
 
 export const ProductView = () => {
 	return (
@@ -44,6 +46,8 @@ export const ProductView = () => {
 
 			
 		</div>
+		<FAQ/>
+		<CTA/>
 		</>
 	);
 };

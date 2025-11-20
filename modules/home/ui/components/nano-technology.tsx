@@ -56,9 +56,9 @@ export const NanoTechnology = () => {
         <div className="pt-4">
           <Link href="/about">
             <Button
-              variant="default"
+              
               size="lg"
-              className="px-8 py-6 h-auto text-lg hover:shadow-xl hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300">
+              >
               Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

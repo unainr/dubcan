@@ -1,3 +1,4 @@
+import Footer from "@/components/layouts/Footer"
 import MainHeader from "@/components/layouts/Header"
 
 export interface LayoutProps{
@@ -8,6 +9,7 @@ const Layout = ({children}:LayoutProps) => {
     <>
     <MainHeader/>
     {children}
+    <Footer/>
     </>
   )
 }

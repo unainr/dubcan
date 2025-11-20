@@ -57,6 +57,18 @@ export default function MainHeader() {
 						About
 					</Link>
 					<Link
+						href="/services"
+						className={cn(
+							"text-sm font-medium transition-colors",
+							!isScrolled && "text-white/90 hover:text-white",
+							isScrolled &&
+								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
+							isActive("/services") &&
+								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
+						)}>
+						Services
+					</Link>
+					<Link
 						href="/products"
 						className={cn(
 							"text-sm font-medium transition-colors",
@@ -69,29 +81,18 @@ export default function MainHeader() {
 						Products
 					</Link>
 
-					<Link
-						href="/event"
+				<Link
+						href="/contact"
 						className={cn(
 							"text-sm font-medium transition-colors",
 							!isScrolled && "text-white/90 hover:text-white",
 							isScrolled &&
 								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-							isActive("/event") &&
+							isActive("/contact") &&
 								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
-						Event
-					</Link>
-					<Link
-						href="/pricing"
-						className={cn(
-							"text-sm font-medium transition-colors",
-							!isScrolled && "text-white/90 hover:text-white",
-							isScrolled &&
-								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-							isActive("/pricing") &&
-								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
-						)}>
-						Pricing
+						
+						Contact
 					</Link>
 				</nav>
 
@@ -147,36 +148,29 @@ export default function MainHeader() {
 									)}>
 									About
 								</Link>
-							<Link
-						href="/products"
+								<Link
+						href="/services"
 						className={cn(
 							"text-sm font-medium transition-colors",
 							!isScrolled && "text-white/90 hover:text-white",
 							isScrolled &&
 								"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-							isActive("/products") &&
+							isActive("/services") &&
 								"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 						)}>
-						Products
+						Services
 					</Link>
-
 								<Link
-									href="/event"
+									href="/products"
 									className={cn(
-										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-										isActive("/event") &&
+										"text-sm font-medium transition-colors",
+										!isScrolled && "text-white/90 hover:text-white",
+										isScrolled &&
+											"text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
+										isActive("/products") &&
 											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
 									)}>
-									Event
-								</Link>
-								<Link
-									href="/pricing"
-									className={cn(
-										"text-sm font-medium transition-colors text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400",
-										isActive("/pricing") &&
-											"text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4"
-									)}>
-									Pricing
+									Products
 								</Link>
 
 								<Link href={"/contact"}>
