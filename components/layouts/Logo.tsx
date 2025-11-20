@@ -6,7 +6,7 @@ const Logo = () => {
 			  <Image
 				src="/logo.png" 
 				alt="DubCan Logo"
-				width={108}
+				width={90}
 				height={50}
 				priority
 			  />
